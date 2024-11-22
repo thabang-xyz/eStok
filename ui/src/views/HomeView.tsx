@@ -1,6 +1,6 @@
-import AuthComponent from '../components/auth/AuthComponent';
+import HomeComponent from '../components/HomeComponent';
 const HomeView = () => {
-  return <p>Home</p>;
+  return <HomeComponent />;
 };
 
 export default HomeView;
