@@ -1,12 +1,12 @@
 import { ReactNode } from 'react';
 import DashboardHeaderComponent from '../components/DashboardHeader';
 
-const PublicLayout = ({ children }: { children: ReactNode }) => {
+const DashboardLayout = ({ children }: { children: ReactNode }) => {
   return (
     <>
       <DashboardHeaderComponent />
       <div className='flex flex-col min-h-screen'>
-        <main className='flex-grow container mx-auto px-4 py-8'>
+        <main className='flex-grow container mx-auto px-4 py-8 max-w-screen-xl'>
           {children}
         </main>
       </div>
@@ -14,4 +14,4 @@ const PublicLayout = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export default PublicLayout;
+export default DashboardLayout;

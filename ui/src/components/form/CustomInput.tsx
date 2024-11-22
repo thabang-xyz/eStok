@@ -6,6 +6,7 @@ interface SearchInputProps {
   value?: string;
   onKeyUp?: (event: KeyboardEvent<HTMLInputElement>) => void;
   type?: string;
+  maxLength?: number;
 }
 
 const CustomInput: FC<SearchInputProps> = ({
@@ -14,6 +15,7 @@ const CustomInput: FC<SearchInputProps> = ({
   value,
   onKeyUp,
   type = 'text',
+  maxLength = 100,
 }) => {
   return (
     <div className='relative w-full mb-4'>
@@ -24,6 +26,7 @@ const CustomInput: FC<SearchInputProps> = ({
         value={value}
         onChange={onChange}
         onKeyUp={onKeyUp}
+        maxLength={maxLength}
       />
     </div>
   );
