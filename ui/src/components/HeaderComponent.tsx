@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import CustomLink from './form/Link';
 
 const logo = require('../assets/estok-logo.png');
@@ -17,15 +18,13 @@ const HeaderComponent = () => {
             </span>
           </a>
           <div className='flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse'>
-            <button
+            <Link
               type='button'
-              onClick={() => {
-                window.location.href = '/register';
-              }}
+              to='/login'
               className='text-white bg-brand-primary hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
             >
-              Get started
-            </button>
+              Login
+            </Link>
             <button
               data-collapse-toggle='navbar-sticky'
               type='button'
