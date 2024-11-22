@@ -4,6 +4,9 @@ module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      gridAutoColumns: {
+        '2fr': 'minmax(0, 2fr)',
+      },
       colors: {
         primary: {
           50: '#eff6ff',

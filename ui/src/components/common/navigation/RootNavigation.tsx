@@ -6,6 +6,8 @@ import ForgotPasswordView from '../../../views/auth/ForgotPasswordView';
 import DashboardLayout from '../../../layout/DashboardLayout';
 import ProtectedRoute from '../AuthGuard';
 import Index from '../../../views/dashboard/Index';
+import OurStoryView from '../../../views/basics/OurStoryView';
+import OurServicesView from '../../../views/basics/OurServicesView';
 
 const RootNavigation = () => {
   const isAuthenticated = true;
@@ -14,6 +16,8 @@ const RootNavigation = () => {
       <Route path='' element={<HomeView />} />
       <Route path='register' element={<RegisterView />} />
       <Route path='forgot-password' element={<ForgotPasswordView />} />
+      <Route path='our-story' element={<OurStoryView />} />
+      <Route path='our-services' element={<OurServicesView />} />
       <Route
         element={
           <DashboardLayout>
