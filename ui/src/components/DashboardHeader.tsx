@@ -1,8 +1,6 @@
 import CustomLink from './form/Link';
-
 const logo = require('../assets/estok-logo.png');
-
-const HeaderComponent = () => {
+const DashboardHeaderComponent = () => {
   return (
     <div className='h-16 p-4 bg-green-600 text-center align-middle'>
       <nav className='bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600'>
@@ -11,7 +9,7 @@ const HeaderComponent = () => {
             href='/'
             className='flex items-center space-x-3 rtl:space-x-reverse'
           >
-            <img src={logo} className='h-8' alt='estok' />
+            <img src={logo} className='h-8' alt='eStok' />
             <span className='self-center text-2xl font-semibold whitespace-nowrap dark:text-white'>
               EStok
             </span>
@@ -22,9 +20,9 @@ const HeaderComponent = () => {
               onClick={() => {
                 window.location.href = '/register';
               }}
-              className='text-white bg-brand-primary hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+              className='text-white bg-green-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
             >
-              Get started
+              Signout
             </button>
             <button
               data-collapse-toggle='navbar-sticky'
@@ -68,4 +66,4 @@ const HeaderComponent = () => {
   );
 };
 
-export default HeaderComponent;
+export default DashboardHeaderComponent;

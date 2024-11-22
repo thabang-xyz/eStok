@@ -1,8 +1,18 @@
+import { BrowserRouter } from 'react-router-dom';
+import { initFlowbite } from 'flowbite';
 import './app.css';
-import HomeView from './views/HomeView';
+import RootNavigation from './components/common/navigation/RootNavigation';
+import { useEffect } from 'react';
 
 function App() {
-  return <HomeView />;
+  useEffect(() => {
+    initFlowbite();
+  }, []);
+  return (
+    <BrowserRouter>
+      <RootNavigation />;
+    </BrowserRouter>
+  );
 }
 
 export default App;

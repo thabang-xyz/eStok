@@ -5,20 +5,18 @@ interface SearchInputProps {
   onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
   value?: string;
   onKeyUp?: (event: KeyboardEvent<HTMLInputElement>) => void;
-  type?: string;
 }
 
-const CustomInput: FC<SearchInputProps> = ({
-  placeholder = '...',
+const PasswordInput: FC<SearchInputProps> = ({
+  placeholder = 'password',
   onChange,
   value,
   onKeyUp,
-  type = 'text',
 }) => {
   return (
     <div className='relative w-full mb-4'>
       <input
-        type={type}
+        type='password'
         className='block p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-900 focus:border-green-900 sm:text-sm h-12 w-full'
         placeholder={placeholder}
         value={value}
@@ -29,4 +27,4 @@ const CustomInput: FC<SearchInputProps> = ({
   );
 };
 
-export default CustomInput;
+export default PasswordInput;
