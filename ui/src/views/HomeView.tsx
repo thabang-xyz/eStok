@@ -1,9 +1,9 @@
-import HomeComponent from '../components/HeaderComponent';
 import PublicLayout from '../layout/PublicLayout';
+import AuthComponent from '../components/auth/AuthComponent';
 const HomeView = () => {
   return (
     <PublicLayout>
-      <p>Test</p>
+      <AuthComponent />
     </PublicLayout>
   );
 };
